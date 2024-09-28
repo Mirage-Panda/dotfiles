@@ -26,3 +26,5 @@
 - Browser - [Arc](https://arc.net/)
 - Spotify Client - [Spicetify w/ Catppuccin Mocha Theme](https://spicetify.app/)
 - Monkeytype Theme - Catppuccin
+## Screenshots
+<img src="https://github.com/Mirage-Panda/dotfiles/blob/main/screenshots/Screensavers.png?raw=true">
