@@ -1,0 +1,41 @@
+# Load Scripting Addon
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
+# Initialise Bootstraps
+source "$HOME/.config/yabai/colors.sh"
+sketchybar &
+background &
+borders style=round width=6 hidpi=on active_color="glow(0xee$MOCHA_ROSEWATER)" inactive_color=0xdd$MOCHA_SURFACE0 & 
+
+# configs
+yabai -m config top_padding               12              \
+                bottom_padding            12              \
+                left_padding              12              \
+                right_padding             12              \
+                window_gap                15              \
+                                                          \
+                window_shadow             off             \
+                window_opacity            on              \
+                active_window_opacity     1.0             \
+                normal_window_opacity     0.85            \
+                window_opacity_duration   0.1             \
+                window_animation_duration 0.2             \
+                window_animation_easing   ease_out_cubic  \
+                insert_feedback_color     0xffcba6f7      \
+                menubar_opacity           1               \
+                                                          \
+                auto_balance              off             \
+                                                          \
+                layout                    bsp             \
+                                                          \
+                mouse_modifier            fn              \
+                mouse_action1             move            \
+                mouse_action2             resize          \
+                mouse_drop_action         swap            \
+# rules
+yabai -m rule --add app="^(Karabiner-Elements|Karabiner-ElementViewer|iPhone Mirroring|Archive Utility|System Settings|Raycast|Keka|CleanMyMac X)$" manage=off
+yabai -m rule --add label="WeChat" app="^WeChat$" title!="^WeChat \(Chats\)$" manage=off
+yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
+yabai -m rule --add label="Safari" app="^Safari$" title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advance)$" manage=off
+yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac" manage=off
