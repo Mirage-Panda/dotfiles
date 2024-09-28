@@ -1,4 +1,6 @@
 # dotfiles
+## Screenshots
+<img src="https://github.com/Mirage-Panda/dotfiles/blob/main/screenshots/Screensavers.png?raw=true">
 ## Sources
 - Ascii Art (Lightly Modified) - [Ascii Art Website](https://www.asciiart.eu/space/spaceships)
 - Colour Scheme - [Mocha Theme](https://catppuccin.com/palette)
@@ -26,5 +28,3 @@
 - Browser - [Arc](https://arc.net/)
 - Spotify Client - [Spicetify w/ Catppuccin Mocha Theme](https://spicetify.app/)
 - Monkeytype Theme - Catppuccin
-## Screenshots
-<img src="https://github.com/Mirage-Panda/dotfiles/blob/main/screenshots/Screensavers.png?raw=true">
