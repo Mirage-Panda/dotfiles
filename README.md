@@ -1,1 +1,1 @@
-# My Dotfiles Repository
+# dotfiles
