@@ -33,3 +33,6 @@
 - Browser - [Arc](https://arc.net/)  
 - Spotify Client - [Spicetify w/ Catppuccin Mocha Theme](https://spicetify.app/)  
 - Monkeytype Theme - Catppuccin
+
+## Mac Setup File
+- setup.sh based on - [Oaroki](https://github.com/oaroki-git/configs/blob/main/macos_setup.sh)
