@@ -17,12 +17,12 @@
 ## Terminal
 - Package Manager - [HomeBrew](https://brew.sh/)  
 - Shell - zsh  
-- Zsh Theme - [Powerlevel10k](https://github.com/romkatv/powerlevel10k)  
+- Zsh Theme - [Starship](https://starship.rs/)  
 - Autocompletion - [Zsh Autocomplete](https://github.com/marlonrichert/zsh-autocomplete)  
 - Syntax Highlighting - [Zsh Syntax Highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)  
 - Change Directory - [Zoxide](https://github.com/ajeetdsouza/zoxide)  
 - List - [Eza](https://github.com/eza-community/eza)  
-- Terminal Emulator - [iTerm](https://iterm2.com/)  
+- Terminal Emulator - [Kitty](https://sw.kovidgoyal.net/kitty/)  
 
 ## CLI Tools
 - Neovim - [NvChad w/ Catppuccin Theme](https://nvchad.com/)  
@@ -35,4 +35,4 @@
 - Monkeytype Theme - Catppuccin
 
 ## Mac Setup File
-- setup.sh based on - [Oaroki](https://github.com/oaroki-git/configs/blob/main/macos_setup.sh)
+- setup.sh - Based on [Oaroki's script](https://github.com/oaroki-git/configs/blob/main/macos_setup.sh)
