@@ -21,6 +21,8 @@ alias ls="eza --icons=always"
 eval "$(zoxide init zsh)"
 alias cd="z"
 
+alias dots="cd ~/Github/dotfiles"
+alias config="cd ~/.config"
 
 eval "$(starship init zsh)"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
