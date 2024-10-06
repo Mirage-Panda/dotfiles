@@ -1,14 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-# fi
-#
-# source ~/powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -22,7 +11,13 @@ eval "$(zoxide init zsh)"
 alias cd="z"
 
 alias dots="cd ~/Github/dotfiles"
-alias config="cd ~/.config"
+alias lazydots="cd ~/Github/dotfiles && lazygit"
+alias conf="cd ~/.config"
+alias nvimconf="cd ~/.config && nvim"
+alias zshrc="nvim ~/.zshrc"
 
 eval "$(starship init zsh)"
+
+# setup
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
+export HOMEBREW_NO_AUTO_UPDATE=1
