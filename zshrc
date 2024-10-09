@@ -15,9 +15,12 @@ alias lazydots="cd ~/Github/dotfiles && lazygit"
 alias conf="cd ~/.config"
 alias nvimconf="cd ~/.config && nvim"
 alias zshrc="nvim ~/.zshrc"
+alias github="cd ~/Github"
+alias ttt="cd ~/Github/Tic-Tac-Toe"
 
 eval "$(starship init zsh)"
 
 # setup
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
+export STARSHIP_CACHE=~/.config/starship/cache
 export HOMEBREW_NO_AUTO_UPDATE=1
