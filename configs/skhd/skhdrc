@@ -63,3 +63,5 @@ fn + ctrl - 0 : yabai -m space --focus 10
 ctrl + fn - q : yabai --stop-service
 ctrl + fn - s : yabai --start-service
 ctrl + fn - r : yabai --restart-service
+ctrl + fn - b : sketchybar --reload
+ctrl + fn - c : skhd --restart-service
