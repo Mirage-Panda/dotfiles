@@ -7,10 +7,10 @@ source "$HOME/.config/yabai/colors.sh"
 
 borders_options=(
 	style=round
-  width=5.0
+  width=6
   hidpi=on
-  active_color="glow(0xee$MOCHA_ROSEWATER)"
-  inactive_color=0xdd$MOCHA_SURFACE0
+  active_color="gradient(top_left=0xee$MOCHA_LAVENDER,bottom_right=0xee$MOCHA_MAUVE)"
+  inactive_color="gradient(top_left=0xaa$MOCHA_OVERLAY0,bottom_right=0xdd$MOCHA_SURFACE0)"
 )
 
 # Initialise Bootstraps
@@ -18,11 +18,12 @@ sketchybar &
 borders "${borders_options[@]}" & 
 
 # configs
-yabai -m config top_padding               12              \
+yabai -m config top_padding               6               \
                 bottom_padding            12              \
                 left_padding              12              \
                 right_padding             12              \
-                window_gap                15              \
+                window_gap                12              \
+                external_bar              all:38:0        \
                                                           \
                 window_shadow             off             \
                 window_opacity            on              \
@@ -31,8 +32,8 @@ yabai -m config top_padding               12              \
                 window_opacity_duration   0.1             \
                 window_animation_duration 0.15            \
                 window_animation_easing   ease_out_quart  \
-                insert_feedback_color     0xffcba6f7      \
-                menubar_opacity           0.8             \
+                insert_feedback_color     0xff$MOCHA_RED  \
+                menubar_opacity           0.2             \
                                                           \
                 auto_balance              off             \
                                                           \
@@ -46,10 +47,9 @@ yabai -m        space 9 --layout          stack
 
 # rules
 yabai -m rule --add app="^(Karabiner-(Elements|EventViewer)|iPhone Mirroring|Archive Utility|System Settings|Raycast|Keka|CleanMyMac X)$" manage=off
-yabai -m rule --add label="WeChat" app="^WeChat$" title!="^WeChat \(Chats\)$" manage=off
+yabai -m rule --add label="WeChat" app="^WeChat$" title!="^WeChat \(Chats)$" manage=off
 yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
 yabai -m rule --add label="Safari" app="^Safari$" title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advance)$" manage=off
 yabai -m rule --add label="Arc" app="^Arc$" title="^(Mirage|General|Profiles|Max|Links|Shortcuts|Icon|Advanced)$" manage=off
-yabai -m rule --add label="Books" app="^Books$" title!="^(Home|All|Want to Read|Finished|(PDF|My Sample|(B|Audiob)ook)s)$" manage=off
-yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac" manage=off
-yabai -m rule --add label="Zoom" app="zoom.us" title="Zoom Workplace" manage=off
+# yabai -m rule --add label="Books" app="^Books$" title!="^(Home|All|Want to Read|Finished|(PDF|My Sample|(Book|Audiobook)s))$" manage=off
+yabai -m rule --add label="Zoom" app="zoom.us" title!="Zoom Workplace" manage=off
