@@ -15,12 +15,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Make sure to setup `mapleader` and `maplocalleader` before
--- loading lazy.nvim so that mappings are correct.
--- This is also a good place to setup other settings (vim.opt)
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
-
 -- Setup lazy.nvim
 require("lazy").setup({
   -- NvimTree plugin
@@ -29,16 +23,62 @@ require("lazy").setup({
     requires = { "nvim-tree/nvim-web-devicons" }, -- for file icons
     config = function()
       -- Setup nvim-tree
-      require("nvim-tree").setup()
+      require("nvim-tree").setup({
+        filters = {
+	  custom = { ".DS_Store" }
+	}
+      })
     end,
   },
+
   "nvim-tree/nvim-web-devicons",
+
+  'nvim-telescope/telescope.nvim', tag = '0.1.8',
+  dependencies = { 'nvim-lua/plenary.nvim' },
+
+  {
+    'goolord/alpha-nvim',
+    config = function()
+      require('plugins.alpha')
+    end
+  },
+
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+
   "folke/which-key.nvim",
   event = "VeryLazy",
   opts = {
     -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
   },
-  checker = { enabled = true }
+
+  "williamboman/mason.nvim",
+  "williamboman/mason-lspconfig.nvim",
+  "neovim/nvim-lspconfig",
+
+  {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    config = true
+    -- use opts = {} for passing setup options
+    -- this is equivalent to setup({}) function
+  },
+
+  "nvim-treesitter/nvim-treesitter",
+
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    ---@module "ibl"
+    ---@type ibl.config
+    opts = {},
+  },
+
+  {
+    'stevearc/conform.nvim',
+    opts = {},
+  },
+
+  checker = { enabled = true },
 })
+
+vim.cmd('colorscheme catppuccin')
