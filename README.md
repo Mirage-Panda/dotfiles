@@ -1,6 +1,7 @@
 # dotfiles
 ## Screenshots
 <img src="https://github.com/Mirage-Panda/dotfiles/blob/main/screenshots/Screensavers.png?raw=true">
+Note: Terminal font has been reduced to fit more text in windows. (I have a very small screen.)
 
 ## Sources
 - Ascii Art (Lightly Modified) - [Ascii Art Website](https://www.asciiart.eu/space/spaceships)  
