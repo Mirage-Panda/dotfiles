@@ -1,0 +1,5 @@
+require("config.lazy")
+require("config.styling")
+require("config.keymaps")
+require("plugins.setup")
+require("config.vimoptions")
