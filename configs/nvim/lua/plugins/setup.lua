@@ -15,6 +15,7 @@ require("catppuccin").setup({
 			scope_color = "", -- catppuccin color (eg. `lavender`) Default: text
 			colored_indent_levels = false,
 		},
+		render_markdown = true,
 	},
 	cmp = true,
 })
@@ -35,6 +36,9 @@ require("conform").setup({
 		json = { "prettier" },
 		js = { "prettier" },
 		yaml = { "prettier" },
+		bash = { "beautysh" },
+		sh = { "beautysh" },
+		zsh = { "beautysh" },
 	},
 	format_on_save = {
 		-- These options will be passed to conform.format()

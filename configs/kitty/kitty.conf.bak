@@ -3,12 +3,13 @@ tab_bar_edge                bottom
 tab_bar_style               powerline
 tab_powerline_style         angled
 tab_title_template          {title}{' :{}:'.format(num_windows) if num_windows > 1 else ''}
-# font_family                 Fira Code Retina
-# bold_font                   Fira Code Bold
-# italic_font                 auto
-# bold_italic_font            auto
+
+font_family                 Fira Code Retina
+bold_font                   Fira Code Bold
+italic_font                 auto
+bold_italic_font            auto
 font_size                   16.0
-font_features               FiraCode-Regular +cv02 +cv05 +cv09 +cv14 +ss04 +cv16 +cv31 +cv25 +cv26 +cv32 +cv28 +ss10 +zero +onum
+font_features               FiraCode-Retina +cv02 +cv05 +cv09 +cv14 +ss04 +cv16 +cv31 +cv25 +cv26 +cv32 +cv28 +ss10 +zero +onum
 
 shell_integration           no-cursor
 cursor_shape                block
@@ -24,11 +25,3 @@ background_blur 25
 
 
 include current-theme.conf
-
-
-# BEGIN_KITTY_FONTS
-font_family      family='Fira Code' style=Regular
-bold_font        family='Fira Code' postscript_name=FiraCode-Bold
-italic_font      family='Fira Code' style=Medium
-bold_italic_font auto
-# END_KITTY_FONTS
