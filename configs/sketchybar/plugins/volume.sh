@@ -3,16 +3,16 @@ source icons.sh
 source fonts.sh
 
 if (( INFO == 0 )); then
-    ICON=􀊣
+    ICON=$VOLUME_0
     ICON_PADDING_RIGHT=8
 elif (( INFO >= 1 && INFO <= 33 )); then
-    ICON=􀊥
+    ICON=$VOLUME_33
     ICON_PADDING_RIGHT=12
 elif (( INFO >= 34 && INFO <= 66 )); then
-    ICON=􀊧
+    ICON=$VOLUME_66
     ICON_PADDING_RIGHT=12
 elif (( INFO >= 67 && INFO <= 100 )); then
-    ICON=􀊩
+    ICON=$VOLUME_100
     ICON_PADDING_RIGHT=8
 fi
 
