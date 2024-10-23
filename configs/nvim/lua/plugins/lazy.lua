@@ -111,5 +111,9 @@ require("lazy").setup({
 		opts = {},
 	},
 
+	{
+		"numToStr/Comment.nvim",
+	},
+
 	checker = { enabled = true },
 })

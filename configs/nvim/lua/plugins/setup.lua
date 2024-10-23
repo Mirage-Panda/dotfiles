@@ -46,3 +46,19 @@ require("conform").setup({
 		lsp_format = "fallback",
 	},
 })
+
+require('Comment').setup({
+    toggler = {
+        --- Line-comment toggle keymap
+        line = "<leader>/",
+        --- Block-comment toggle keymap
+        block = "<leader>\\",
+    },
+    opleader = {
+        --- LHS of operator-pending mappings in NORMAL and VISUAL mode
+        --- Line-comment keymap
+        line = "<leader>/",
+        --- Block-comment keymap
+        block = "<leader>\\",
+    },
+})
