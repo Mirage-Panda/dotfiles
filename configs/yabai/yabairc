@@ -53,3 +53,4 @@ yabai -m rule --add label="Safari" app="^Safari$" title="^(General|(Tab|Password
 yabai -m rule --add label="Arc" app="^Arc$" title="^(Mirage|General|Profiles|Max|Links|Shortcuts|Icon|Advanced)$" manage=off
 # yabai -m rule --add label="Books" app="^Books$" title!="^(Home|All|Want to Read|Finished|(PDF|My Sample|(Book|Audiobook)s))$" manage=off
 yabai -m rule --add label="Zoom" app="zoom.us" title!="Zoom Workplace" manage=off
+yabai -m rule --add label="CLassin" app="ClassIn" title!="ClassIn" manage=off
