@@ -28,5 +28,9 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 if [[ $(tty) == *"pts"* ]]; then
     fastfetch
 else
-	fastfetch
+    fastfetch
 fi
+
+alias cbonsai="cbonsai -L 20 -l -i -w 1 -M 2 -t 0.02"
+alias cdclear="cd && clear"
+alias clearfetch="cd && clear && fastfetch"
