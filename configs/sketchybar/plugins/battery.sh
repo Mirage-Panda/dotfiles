@@ -16,9 +16,11 @@ case "${PERCENTAGE}" in
         ;;
     [6-8][0-9]) ICON=$BATTERY_75 COLOR="$GREEN"
         ;;
-    [3-5][0-9]) ICON=$BATTERY_50 COLOR="$YELLOW"
+    [3-5][0-9]) ICON=$BATTERY_50 COLOR="$GREEN"
         ;;
-    [1-2][0-9]) ICON=$BATTERY_25 COLOR="$RED"
+    [2][0-9]) ICON=$BATTERY_25 COLOR="$YELLOW"
+        ;;
+    [1][0-9]) ICON=$BATTERY_25 COLOR="$RED"
         ;;
     0) ICON=$BATTERY_0 COLOR="$RED"
 esac
