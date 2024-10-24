@@ -47,18 +47,21 @@ require("conform").setup({
 	},
 })
 
-require('Comment').setup({
-    toggler = {
-        --- Line-comment toggle keymap
-        line = "<leader>/",
-        --- Block-comment toggle keymap
-        block = "<leader>\\",
-    },
-    opleader = {
-        --- LHS of operator-pending mappings in NORMAL and VISUAL mode
-        --- Line-comment keymap
-        line = "<leader>/",
-        --- Block-comment keymap
-        block = "<leader>\\",
-    },
+require("Comment").setup({
+	toggler = {
+		--- Line-comment toggle keymap
+		line = "<leader>/",
+		--- Block-comment toggle keymap
+		block = "<leader>\\",
+	},
+	opleader = {
+		--- LHS of operator-pending mappings in NORMAL and VISUAL mode
+		--- Line-comment keymap
+		line = "<leader>/",
+		--- Block-comment keymap
+		block = "<leader>\\",
+	},
 })
+
+vim.opt.termguicolors = true
+require("bufferline").setup({})

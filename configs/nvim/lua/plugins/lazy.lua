@@ -115,5 +115,11 @@ require("lazy").setup({
 		"numToStr/Comment.nvim",
 	},
 
+	{
+		"akinsho/bufferline.nvim",
+		version = "*",
+		dependencies = "nvim-tree/nvim-web-devicons",
+	},
+
 	checker = { enabled = true },
 })
