@@ -1,7 +1,7 @@
 # dotfiles
 ## Screenshots
 <img src="https://github.com/Mirage-Panda/dotfiles/blob/main/screenshots/Screensavers.png?raw=true">
-In the screenshot, the terminal font has been reduced (I have a very small screen).
+<i>In the screenshot, the terminal font has been reduced (I have a very small screen).</i>
 
 ## Sources
 - Ascii Art (Lightly Modified) - [Ascii Art Website](https://www.asciiart.eu/space/spaceships)  
