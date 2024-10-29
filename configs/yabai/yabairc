@@ -17,12 +17,16 @@ borders_options=(
 sketchybar &
 borders "${borders_options[@]}" & 
 
+# variables
+export padding=15
+export gap=12
+
 # configs
-yabai -m config top_padding               12              \
-                bottom_padding            12              \
-                left_padding              12              \
-                right_padding             12              \
-                window_gap                12              \
+yabai -m config top_padding               $padding        \
+                bottom_padding            $padding        \
+                left_padding              $padding        \
+                right_padding             $padding        \
+                window_gap                $gap            \
                 external_bar              all:38:0        \
                                                           \
                 window_shadow             off             \
@@ -55,3 +59,4 @@ yabai -m rule --add label="Arc" app="^Arc$" title="^(Mirage|General|Profiles|Max
 yabai -m rule --add label="Zoom" app="zoom.us" title!="Zoom Workplace" manage=off
 yabai -m rule --add label="CLassin" app="ClassIn" title!="ClassIn" manage=off
 yabai -m rule --add label="Nightly" app="Firefox Nightly" title="Picture-In-Picture" manage=off
+yabai -m rule --add label="Firefox" app="Firefox" title="Picture-In-Picture" manage=off
