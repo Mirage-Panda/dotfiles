@@ -15,8 +15,8 @@ BORDER_WIDTH_1=0
 # Setting up the general bar appearance of the bar
 bar=(
     position=top
-    height=38
-    blur_radius=40
+    height=40
+    blur_radius=25
     color=$BAR_COLOR
     topmost=window
     sticky=on
