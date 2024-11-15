@@ -16,7 +16,6 @@ alias conf="cd ~/.config"
 alias nvimconf="cd ~/.config && nvim"
 alias zshrc="nvim ~/.zshrc"
 alias github="cd ~/Github"
-alias ttt="cd ~/Github/Tic-Tac-Toe"
 
 eval "$(starship init zsh)"
 
@@ -31,6 +30,8 @@ else
     fastfetch
 fi
 
-alias cbonsai="cbonsai -L 20 -l -i -w 1 -M 2 -t 0.02"
+alias smallbonsai="cbonsai -L 20 -l -i -w 1 -M 2 -t 0.02"
+alias clock="tty-clock -C 1 -c -b"
 alias cdclear="cd && clear"
 alias clearfetch="cd && clear && fastfetch"
+alias python="python3"
