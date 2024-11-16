@@ -2,26 +2,13 @@
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
 
-# options
-source "$HOME/.config/yabai/colors.sh"
-
-borders_options=(
-	style=round
-  width=6
-  hidpi=on
-  active_color="gradient(top_left=0xee$MOCHA_LAVENDER,bottom_right=0xee$MOCHA_MAUVE)"
-  inactive_color="gradient(top_left=0xaa$MOCHA_OVERLAY0,bottom_right=0xdd$MOCHA_SURFACE0)"
-	order=below
-	ax_focus=off
-)
-
 # Initialise Bootstraps
-sketchybar &
-# borders "${borders_options[@]}" & 
+# sketchybar &
+# borders & 
 
 # variables
-export padding=12
-export gap=8
+export padding=15
+export gap=12
 
 # configs
 yabai -m config top_padding                $padding        \
@@ -31,14 +18,13 @@ yabai -m config top_padding                $padding        \
                 window_gap                 $gap            \
                 external_bar               all:38:0        \
                                                            \
-                window_shadow              on              \
+                window_shadow              off             \
                 window_opacity             on              \
                 active_window_opacity      1.0             \
                 normal_window_opacity      0.85            \
                 window_opacity_duration    0.1             \
-                window_animation_duration  0.15            \
                 window_animation_easing    ease_out_quart  \
-                insert_feedback_color      0xff$MOCHA_RED  \
+                insert_feedback_color      0xfff38ba8      \
                 menubar_opacity            0.2             \
                                                            \
                 auto_balance               off             \
@@ -51,13 +37,16 @@ yabai -m config top_padding                $padding        \
                 mouse_drop_action          swap
 yabai -m        space 9  --layout          stack
 yabai -m        space 10 --layout          stack
+# yabai -m config window_shadow off\
+#                 menubar_opacity 0.2\
+#                 layout float
 
 # rules
 yabai -m rule --add app="^(Karabiner-(Elements|EventViewer)|iPhone Mirroring|Archive Utility|System Settings|Raycast|Keka|CleanMyMac X|Autoclick)$" manage=off
 yabai -m rule --add label="WeChat" app="^WeChat$" title!="^WeChat \(Chats)$" manage=off
 yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
 yabai -m rule --add label="Safari" app="^Safari$" title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advance)$" manage=off
-yabai -m rule --add label="Arc" app="^Arc$" title="^(Mirage|General|Profiles|Max|Links|Shortcuts|Icon|Advanced)$" manage=off
+# yabai -m rule --add label="Arc" app="^Arc$" title="^(Mirage|General|Profiles|Max|Links|Shortcuts|Icon|Advanced)$" manage=off
 # yabai -m rule --add label="Books" app="^Books$" title!="^(Home|All|Want to Read|Finished|(PDF|My Sample|(Book|Audiobook)s))$" manage=off
 yabai -m rule --add label="Zoom" app="zoom.us" title!="Zoom Workplace" manage=off
 yabai -m rule --add label="CLassin" app="ClassIn" title!="ClassIn" manage=off
