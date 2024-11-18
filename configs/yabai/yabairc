@@ -37,7 +37,6 @@ yabai -m config top_padding                $padding        \
                 mouse_action2              resize          \
                 mouse_drop_action          swap
 yabai -m        space 9  --layout          stack
-yabai -m        space 10 --layout          stack
 # yabai -m config window_shadow off\
 #                 menubar_opacity 0.2\
 #                 layout float
@@ -45,8 +44,8 @@ yabai -m        space 10 --layout          stack
 # rules
 yabai -m rule --add app="^(iPhone Mirroring|Archive Utility|System Settings|Raycast|Keka|CleanMyMac X|Autoclick)$" manage=off
 yabai -m rule --add label="WeChat" app="^WeChat$" title!="^WeChat \(Chats)$" manage=off
-yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
-yabai -m rule --add label="Safari" app="^Safari$" title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advance)$" manage=off
+# yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
+# yabai -m rule --add label="Safari" app="^Safari$" title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advance)$" manage=off
 # yabai -m rule --add label="Arc" app="^Arc$" title="^(Mirage|General|Profiles|Max|Links|Shortcuts|Icon|Advanced)$" manage=off
 # yabai -m rule --add label="Zoom" app="zoom.us" title!="Zoom Workplace" manage=off
 # yabai -m rule --add label="Classin" app="ClassIn" title!="ClassIn" manage=off
