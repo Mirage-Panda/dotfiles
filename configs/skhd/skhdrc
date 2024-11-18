@@ -39,31 +39,55 @@ fn + cmd - f : yabai -m window --toggle windowed-fullscreen
 # balance out tree of windows (resize to occupy same area)
 fn - e : yabai -m space --balance
 
-# # decrease window size
-# fn + alt - 0x26 : yabai -m window --resize left:40:0
-# fn + alt - 0x28 : yabai -m window --resize bottom:0:-40
-# fn + alt - 0x22 : yabai -m window --resize top:0:40
-# fn + alt - 0x25 : yabai -m window --resize right:-40:0
-#
-# # increase window size
-# ctrl + fn - 0x26 : yabai -m window --resize left:-40:0
-# ctrl + fn - 0x28 : yabai -m window --resize bottom:0:40
-# ctrl + fn - 0x22 : yabai -m window --resize top:0:-40
-# ctrl + fn - 0x25 : yabai -m window --resize right:40:0
-
-# Smart resize (single keybinding adjusts size intelligently)
-fn + alt - 0x26 : if [ "$(yabai -m query --windows --window | jq '.frame.x')" -gt 25 ]; \
-                   then yabai -m window --resize left:40:0; \
-                   else yabai -m window --resize right:-40:0; fi
-fn + alt - 0x28 : if [ "$(yabai -m query --windows --window | jq '.frame.y')" -le 60 ]; \
-                   then yabai -m window --resize bottom:0:-40; \
-                   else yabai -m window --resize bottom:0:40; fi
-fn + alt - 0x22 : if [ "$(yabai -m query --windows --window | jq '.frame.y')" -le 60 ]; \
-                   then yabai -m window --resize top:0:40; \
-                   else yabai -m window --resize bottom:0:-40; fi
-fn + alt - 0x25 : if [ "$(yabai -m query --windows --window | jq '.frame.x')" -le 25 ]; \
-                   then yabai -m window --resize right:-40:0; \
-                   else yabai -m window --resize right:40:0; fi
+# smart resize
+# when the up button is pressed and the window is:
+# on the top right - resize the bottom -40
+# on the top left - resize the bottom -40
+# on the bottom right - resize the top +40
+# on the bottom left - resize the top +40
+fn + alt - i : \
+  corner=$(yabai -m query --windows --window | jq -r '.frame | if (.x > 25 and .y < 60) then "top-right" elif (.x <= 25 and .y < 60) then "top-left" elif (.x > 25 and .y >= 60) then "bottom-right" else "bottom-left" end'); \
+  if [ "$corner" = "top-right" ] || [ "$corner" = "top-left" ]; then \
+    yabai -m window --resize bottom:0:-40; \
+  else \
+    yabai -m window --resize top:0:-40; \
+  fi
+# when the down button is pressed and the window is:
+# on the top right - resize the bottom +40
+# on the top left - resize the bottom +40
+# on the bottom right - resize the top -40
+# on the bottom left - resize the top -40
+fn + alt - k : \
+  corner=$(yabai -m query --windows --window | jq -r '.frame | if (.x > 25 and .y < 60) then "top-right" elif (.x <= 25 and .y < 60) then "top-left" elif (.x > 25 and .y >= 60) then "bottom-right" else "bottom-left" end'); \
+  if [ "$corner" = "top-right" ] || [ "$corner" = "top-left" ]; then \
+    yabai -m window --resize bottom:0:40; \
+  else \
+    yabai -m window --resize top:0:40; \
+  fi
+# when the left button is pressed and the window is:
+# on the top right - resize the left +40
+# on the top left - resize the right -40
+# on the bottom right - resize the left +40
+# on the bottom left - resize the right -40
+fn + alt - j : \
+  corner=$(yabai -m query --windows --window | jq -r '.frame | if (.x > 25 and .y < 60) then "top-right" elif (.x <= 25 and .y < 60) then "top-left" elif (.x > 25 and .y >= 60) then "bottom-right" else "bottom-left" end'); \
+  if [ "$corner" = "top-right" ] || [ "$corner" = "bottom-right" ]; then \
+    yabai -m window --resize left:-40:0; \
+  else \
+    yabai -m window --resize right:-40:0; \
+  fi
+# when the right button is pressed and the window is:
+# on the top right - resize the left -40
+# on the top left - resize the right +40
+# on the bottom right - resize the left -40
+# on the bottom left - resize the right +40
+fn + alt - l : \
+  corner=$(yabai -m query --windows --window | jq -r '.frame | if (.x > 25 and .y < 60) then "top-right" elif (.x <= 25 and .y < 60) then "top-left" elif (.x > 25 and .y >= 60) then "bottom-right" else "bottom-left" end'); \
+  if [ "$corner" = "top-right" ] || [ "$corner" = "bottom-right" ]; then \
+    yabai -m window --resize left:40:0; \
+  else \
+    yabai -m window --resize right:40:0; \
+  fi
 
 # flips
 ctrl + fn - x : yabai -m space --mirror x-axis
