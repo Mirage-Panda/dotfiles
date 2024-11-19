@@ -30,11 +30,10 @@ fn - 0x02 : yabai -m window --focus east
 
 # toggles
 fn - m : yabai -m window --toggle zoom-fullscreen
-fn - space : yabai -m window --toggle float
+fn - space : yabai -m window --toggle float --grid 4:4:1:1:2:2 && yabai -m window --move rel:0:-80
 # fn - u : yabai -m window --toggle float && yabai -m window --toggle float
 fn + cmd - s : yabai -m space --layout stack
 fn + cmd - b: yabai -m space --layout bsp
-fn + cmd - f : yabai -m window --toggle windowed-fullscreen
 
 # balance out tree of windows (resize to occupy same area)
 fn - e : yabai -m space --balance
