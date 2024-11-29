@@ -39,6 +39,7 @@ require("conform").setup({
 		bash = { "beautysh" },
 		sh = { "beautysh" },
 		zsh = { "beautysh" },
+		python = { "black" },
 	},
 	format_on_save = {
 		-- These options will be passed to conform.format()
