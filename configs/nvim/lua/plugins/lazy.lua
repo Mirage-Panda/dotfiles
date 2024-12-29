@@ -72,16 +72,6 @@ require("lazy").setup({
 	},
 
 	{
-		"nvim-treesitter/nvim-treesitter",
-		config = function()
-			require("nvim-treesitter.configs").setup({
-				ensure_installed = { "markdown", "markdown_inline" }, -- Add languages here
-				highlight = { enable = true }, -- Enable syntax highlighting
-			})
-		end,
-	},
-
-	{
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
 		---@module "ibl"
@@ -108,14 +98,6 @@ require("lazy").setup({
 			require("plugins.cmp")
 		end,
 	},
-
-	-- {
-	-- 	"MeanderingProgrammer/render-markdown.nvim",
-	-- 	dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
-	-- 	---@module 'render-markdown'
-	-- 	---@type render.md.UserConfig
-	-- 	opts = {},
-	-- },
 
 	{
 		"numToStr/Comment.nvim",

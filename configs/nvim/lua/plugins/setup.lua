@@ -9,7 +9,6 @@ require("catppuccin").setup({
 		which_key = true,
 		mason = true,
 		native_lsp = true,
-		treesitter = true,
 		indent_blankline = {
 			enabled = true,
 			scope_color = "", -- catppuccin color (eg. `lavender`) Default: text
@@ -21,12 +20,6 @@ require("catppuccin").setup({
 })
 
 require("ibl").setup()
-require("nvim-treesitter.configs").setup({
-	highlight = {
-		enable = true,
-		additional_vim_regex_highlighting = false,
-	},
-})
 
 require("conform").setup({
 	formatters_by_ft = {
@@ -39,7 +32,7 @@ require("conform").setup({
 		bash = { "beautysh" },
 		sh = { "beautysh" },
 		zsh = { "beautysh" },
-		python = { "black" },
+		python = { "pyink" },
 	},
 	format_on_save = {
 		-- These options will be passed to conform.format()
