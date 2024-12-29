@@ -9,12 +9,12 @@ require("catppuccin").setup({
 		which_key = true,
 		mason = true,
 		native_lsp = true,
+		treesitter = true,
 		indent_blankline = {
 			enabled = true,
 			scope_color = "", -- catppuccin color (eg. `lavender`) Default: text
 			colored_indent_levels = false,
 		},
-		render_markdown = true,
 	},
 	cmp = true,
 })

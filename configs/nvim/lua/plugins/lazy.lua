@@ -30,6 +30,7 @@ require("lazy").setup({
 			})
 		end,
 	},
+
 	{
 		"nvim-tree/nvim-web-devicons",
 	},
@@ -101,6 +102,7 @@ require("lazy").setup({
 
 	{
 		"numToStr/Comment.nvim",
+		event = { "BufReadPre", "BufNewFile" },
 	},
 
 	{
@@ -108,36 +110,32 @@ require("lazy").setup({
 		version = "*",
 		dependencies = "nvim-tree/nvim-web-devicons",
 	},
+
 	{
-		"epwalsh/obsidian.nvim",
-		version = "*", -- recommended, use latest release instead of latest commit
-		-- lazy = true,
-		ft = "markdown",
-		-- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
-		-- event = {
-		--   -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
-		--   -- E.g. "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/*.md"
-		--   -- refer to `:h file-pattern` for more examples
-		--   "BufReadPre path/to/my-vault/*.md",
-		--   "BufNewFile path/to/my-vault/*.md",
-		-- },
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		config = function()
+			-- Import nvim-treesitter plugin
+			local treesitter = require("nvim-treesitter.configs")
 
-		dependencies = {
-			-- Required.
-			"nvim-lua/plenary.nvim",
-			-- Optional.
-			"nvim-telescope/telescope.nvim",
-		},
-		opts = {
-			workspaces = {
-				{
-					name = "Obsidian Vault",
-					path = "~/Obsidian Vault",
+			-- Configure treesitter
+			treesitter.setup({
+				highlight = { enable = true },
+				indent = { enable = true },
+				ensure_installed = {
+					"lua",
 				},
-			},
-
-			-- see below for full list of options 👇
-		},
+				incremental_selection = {
+					enable = true,
+					keymaps = {
+						init_selection = "<C-space>",
+						node_incremental = "<C-space>",
+						scope_incremental = false,
+						node_decremental = "<bs>",
+					},
+				},
+			})
+		end,
 	},
 
 	checker = { enabled = true },
