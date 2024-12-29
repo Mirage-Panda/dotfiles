@@ -4,12 +4,12 @@ source "$HOME/.config/borders/colors.sh"
 
 options=(
     style=round
-    width=6
+    width=4
     hidpi=on
-    active_color="glow(0xee$MOCHA_MAUVE)"
+    active_color="gradient(top_left=0xee$MOCHA_MAUVE,bottom_right=0xee$MOCHA_RED)"
     inactive_color="gradient(top_left=0xaa$MOCHA_OVERLAY0,bottom_right=0xdd$MOCHA_SURFACE0)"
     order=below
-    ax_focus=off
+    ax_focus=on
 )
 
 # active_color="gradient(top_left=0xee$MOCHA_LAVENDER,bottom_right=0xee$MOCHA_MAUVE)"
