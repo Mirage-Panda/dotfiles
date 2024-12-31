@@ -1,5 +1,4 @@
 require("plugins.lazy")
-require("config.styling")
 require("config.keymaps")
 require("plugins.setup")
-require("config.vimoptions")
+require("config.options")

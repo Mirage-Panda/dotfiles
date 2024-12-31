@@ -3,6 +3,7 @@ require("mason-lspconfig").setup()
 require("catppuccin").setup({
 	integrations = {
 		default_integrations = false,
+		cmp = true,
 		nvimtree = true,
 		telescope = true,
 		alpha = true,
@@ -16,7 +17,7 @@ require("catppuccin").setup({
 			colored_indent_levels = false,
 		},
 	},
-	cmp = true,
+	transparent_background = true,
 })
 
 require("conform").setup({
