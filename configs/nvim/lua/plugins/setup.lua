@@ -19,8 +19,6 @@ require("catppuccin").setup({
 	cmp = true,
 })
 
-require("ibl").setup()
-
 require("conform").setup({
 	formatters_by_ft = {
 		lua = { "stylua" },
@@ -58,4 +56,12 @@ require("Comment").setup({
 })
 
 vim.opt.termguicolors = true
+
 require("bufferline").setup({})
+
+require("mini.indentscope").setup({
+	draw = {
+		delay = 0,
+		animation = require("mini.indentscope").gen_animation.none(),
+	},
+})

@@ -73,15 +73,6 @@ require("lazy").setup({
 	},
 
 	{
-		"lukas-reineke/indent-blankline.nvim",
-		main = "ibl",
-		---@module "ibl"
-		---@type ibl.config
-		opts = {},
-		lazy = true,
-	},
-
-	{
 		"stevearc/conform.nvim",
 		opts = {},
 		lazy = true,
@@ -111,6 +102,8 @@ require("lazy").setup({
 		dependencies = "nvim-tree/nvim-web-devicons",
 	},
 
+	{ "echasnovski/mini.indentscope" },
+
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
@@ -123,6 +116,7 @@ require("lazy").setup({
 				highlight = { enable = true },
 				indent = { enable = true },
 				ensure_installed = {
+					"python",
 					"lua",
 				},
 				incremental_selection = {
