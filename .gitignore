@@ -1,2 +1,3 @@
 .DS_Store
 configs/starship/cache/
+configs/nvim/lazy-lock.json
