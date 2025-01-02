@@ -45,7 +45,7 @@ require("lazy").setup({
 	{
 		"goolord/alpha-nvim",
 		config = function()
-			require("plugins.alpha")
+			require("settings.alpha")
 		end,
 	},
 
@@ -87,7 +87,7 @@ require("lazy").setup({
 			"hrsh7th/cmp-cmdline",
 		},
 		config = function()
-			require("plugins.cmp")
+			require("settings.cmp")
 		end,
 	},
 
