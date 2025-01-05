@@ -157,7 +157,7 @@ sensitivity = 100
 # 'mono' outputs left to right lowest to highest frequencies.
 # 'mono_option' set mono to either take input from 'left', 'right' or 'average'.
 # set 'reverse' to 1 to display frequencies the other way around.
-; channels = stereo
+channels = mono
 ; mono_option = average
 ; reverse = 0
 
