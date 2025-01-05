@@ -40,7 +40,7 @@ window_placement second_child                               \
 yabai -m         space 9  --layout          stack
 
 # rules
-yabai -m rule --add app="^(iPhone Mirroring|Archive Utility|System Settings|Raycast|Keka|CleanMyMac X|Autoclick|Stickies|Weave Manager)$" manage=off
+yabai -m rule --add app="^(iPhone Mirroring|Archive Utility|System Settings|Raycast|Keka|CleanMyMac X|Autoclick|Stickies|Weave Manager|IINA)$" manage=off
 yabai -m rule --add label="WeChat" app="^WeChat$" title!="^WeChat \(Chats)$" manage=off
 yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
 yabai -m rule --add label="Arc" app="^Arc$" title="^(Mirage|General|Profiles|Max|Links|Shortcuts|Icon|Advanced)$" manage=off
