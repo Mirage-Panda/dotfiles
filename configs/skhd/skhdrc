@@ -16,6 +16,21 @@
 #   00 01 02 03 05 04 26 28 25 29 27
 #    06 07 08 09 0B 2D 2E 2B 2F 2C
 # -----------------------------------------
+
+# initialisation
+# source ~/.config/borders/jankyborders
+
+# modes
+:: default : eval ~/.config/borders/default_borders.sh
+:: resize_mode : eval ~/.config/borders/resize_borders.sh
+:: service_mode : eval ~/.config/borders/service_borders.sh
+
+# mode switching
+default < fn + alt - r ; resize_mode
+default < fn + alt - s ; service_mode
+resize_mode < fn + alt - r ; default
+service_mode < fn + alt - s ; default
+
 # change window focus within space
 fn - s : yabai -m window --focus south
 fn - w : yabai -m window --focus north
@@ -34,19 +49,19 @@ fn + cmd - b: yabai -m space --layout bsp
 # balance out windows
 fn - e : yabai -m space --balance
 
-# smart resize
-fn + alt - i : yabai -m window --resize top:0:-20;   \
-               yabai -m window --resize bottom:0:-20
-fn + alt - j : yabai -m window --resize left:-20:0;  \
-               yabai -m window --resize right:-20:0;
-fn + alt - k : yabai -m window --resize bottom:0:20; \
-               yabai -m window --resize top:0:20
-fn + alt - l : yabai -m window --resize right:20:0;  \
-               yabai -m window --resize left:20:0
+# resize_mode
+resize_mode < i : yabai -m window --resize top:0:-20;   \
+                  yabai -m window --resize bottom:0:-20
+resize_mode < j : yabai -m window --resize left:-20:0;  \
+                  yabai -m window --resize right:-20:0;
+resize_mode < k : yabai -m window --resize bottom:0:20; \
+                  yabai -m window --resize top:0:20
+resize_mode < l : yabai -m window --resize right:20:0;  \
+                  yabai -m window --resize left:20:0
 
 # flips
-fn - x : yabai -m space --mirror x-axis
-fn - y : yabai -m space --mirror y-axis
+resize_mode < x : yabai -m space --mirror x-axis
+resize_mode < y : yabai -m space --mirror y-axis
 
 # change spaces
 shift + fn - 1 : yabai -m window --space 1
@@ -80,12 +95,7 @@ fn - 8 : yabai -m space --focus 8
 fn - 9 : yabai -m space --focus 9
 fn - 0 : yabai -m space --focus 10
 
-# services
-# yabai
-ctrl + fn - q : yabai --stop-service
-ctrl + fn - s : yabai --start-service
-ctrl + fn - r : yabai --restart-service
-# misc
-ctrl + fn - b : sketchybar --reload
-ctrl + fn - c : skhd --restart-service
-ctrl + fn - d : brew services restart borders
+# service mode
+service_mode < y : yabai --restart-service
+service_mode < b : sketchybar --reload
+service_mode < s : skhd --restart-service
