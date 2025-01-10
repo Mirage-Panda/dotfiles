@@ -29,9 +29,6 @@ local remaining_time = sbar.add("item", {
 	},
 })
 
--- moved here
-local color = colors.green
-
 battery:subscribe({ "routine", "power_source_change", "system_woke" }, function()
 	sbar.exec("pmset -g batt", function(batt_info)
 		local icon = "!"
@@ -43,7 +40,7 @@ battery:subscribe({ "routine", "power_source_change", "system_woke" }, function(
 			label = charge .. "%"
 		end
 
-		-- local color = colors.green
+		local color = colors.green
 		local charging, _, _ = batt_info:find("AC Power")
 
 		if charging then
