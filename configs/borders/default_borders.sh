@@ -1,1 +1,3 @@
-borders width=4 active_color='gradient(top_left=0xeecba6f7,bottom_right=0xeeb4befe)' inactive_color='gradient(top_left=0x88a6adc8,bottom_right=0xdd313244)'
+source $HOME/.config/borders/variables.sh
+
+borders width=$WIDTH active_color="gradient(top_left=0xee$MOCHA_MAUVE,bottom_right=0xee$MOCHA_LAVENDER)" inactive_color=$INACTIVE

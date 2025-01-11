@@ -17,37 +17,38 @@
 #    06 07 08 09 0B 2D 2E 2B 2F 2C
 # -----------------------------------------
 
-# initialisation
-# source ~/.config/borders/jankyborders
-
 # modes
 :: default : eval ~/.config/borders/default_borders.sh
-:: resize_mode : eval ~/.config/borders/resize_borders.sh
-:: service_mode : eval ~/.config/borders/service_borders.sh
+:: resize_mode @ : eval ~/.config/borders/resize_borders.sh
+:: service_mode @ : eval ~/.config/borders/service_borders.sh
 
 # mode switching
-default < fn + alt - r ; resize_mode
-default < fn + alt - s ; service_mode
-resize_mode < fn + alt - r ; default
-service_mode < fn + alt - s ; default
+default < rcmd - r ; resize_mode
+default < rcmd - s ; service_mode
+
+resize_mode < rcmd - r ; default
+resize_mode < escape ; default
+
+service_mode < rcmd - s ; default
+service_mode < escape ; default
 
 # change window focus within space
-fn - s : yabai -m window --focus south
-fn - w : yabai -m window --focus north
-fn - a : yabai -m window --focus west
-fn - d : yabai -m window --focus east
+rcmd - s : yabai -m window --focus south
+rcmd - w : yabai -m window --focus north
+rcmd - a : yabai -m window --focus west
+rcmd - d : yabai -m window --focus east
 
 # toggles
-fn - m : yabai -m window --toggle zoom-fullscreen
-fn - t : yabai -m window --toggle sticky --grid 4:4:1:1:2:2 && yabai -m window --move rel:0:-80
-fn - space : yabai -m window --toggle float --grid 4:4:1:1:2:2 && yabai -m window --move rel:0:-80
+rcmd - m : yabai -m window --toggle zoom-fullscreen
+rcmd - t : yabai -m window --toggle sticky --grid 4:4:1:1:2:2 && yabai -m window --move rel:0:-80
+rcmd - space : yabai -m window --toggle float --grid 4:4:1:1:2:2 && yabai -m window --move rel:0:-80
 
 # change space layout
-fn + cmd - s : yabai -m space --layout stack
-fn + cmd - b: yabai -m space --layout bsp
+rcmd - s : yabai -m space --layout stack
+rcmd - b: yabai -m space --layout bsp
 
 # balance out windows
-fn - e : yabai -m space --balance
+rcmd - e : yabai -m space --balance
 
 # resize_mode
 resize_mode < i : yabai -m window --resize top:0:-20;   \
@@ -64,38 +65,38 @@ resize_mode < x : yabai -m space --mirror x-axis
 resize_mode < y : yabai -m space --mirror y-axis
 
 # change spaces
-shift + fn - 1 : yabai -m window --space 1
-shift + fn - 2 : yabai -m window --space 2
-shift + fn - 3 : yabai -m window --space 3
-shift + fn - 4 : yabai -m window --space 4
-shift + fn - 5 : yabai -m window --space 5
-shift + fn - 6 : yabai -m window --space 6
-shift + fn - 7 : yabai -m window --space 7
-shift + fn - 8 : yabai -m window --space 8
-shift + fn - 9 : yabai -m window --space 9
-shift + fn - 0 : yabai -m window --space 10
+shift + rcmd - 1 : yabai -m window --space 1
+shift + rcmd - 2 : yabai -m window --space 2
+shift + rcmd - 3 : yabai -m window --space 3
+shift + rcmd - 4 : yabai -m window --space 4
+shift + rcmd - 5 : yabai -m window --space 5
+shift + rcmd - 6 : yabai -m window --space 6
+shift + rcmd - 7 : yabai -m window --space 7
+shift + rcmd - 8 : yabai -m window --space 8
+shift + rcmd - 9 : yabai -m window --space 9
+shift + rcmd - 0 : yabai -m window --space 10
 
 # swap windows
-shift + fn - s : yabai -m window --swap south
-shift + fn - w : yabai -m window --swap north
-shift + fn - a : yabai -m window --swap west
-shift + fn - d : yabai -m window --swap east
+shift + rcmd - s : yabai -m window --swap south
+shift + rcmd - w : yabai -m window --swap north
+shift + rcmd - a : yabai -m window --swap west
+shift + rcmd - d : yabai -m window --swap east
 
 # switch spaces
-fn - 0x2B : yabai -m space --focus prev
-fn - 0x2F : yabai -m space --focus next
-fn - 1 : yabai -m space --focus 1
-fn - 2 : yabai -m space --focus 2
-fn - 3 : yabai -m space --focus 3
-fn - 4 : yabai -m space --focus 4
-fn - 5 : yabai -m space --focus 5
-fn - 6 : yabai -m space --focus 6
-fn - 7 : yabai -m space --focus 7
-fn - 8 : yabai -m space --focus 8
-fn - 9 : yabai -m space --focus 9
-fn - 0 : yabai -m space --focus 10
+rcmd - 0x2B : yabai -m space --focus prev
+rcmd - 0x2F : yabai -m space --focus next
+rcmd - 1 : yabai -m space --focus 1
+rcmd - 2 : yabai -m space --focus 2
+rcmd - 3 : yabai -m space --focus 3
+rcmd - 4 : yabai -m space --focus 4
+rcmd - 5 : yabai -m space --focus 5
+rcmd - 6 : yabai -m space --focus 6
+rcmd - 7 : yabai -m space --focus 7
+rcmd - 8 : yabai -m space --focus 8
+rcmd - 9 : yabai -m space --focus 9
+rcmd - 0 : yabai -m space --focus 10
 
 # service mode
-service_mode < y : yabai --restart-service
-service_mode < b : sketchybar --reload
-service_mode < s : skhd --restart-service
+service_mode < y : skhd -k "escape" ; yabai --restart-service
+service_mode < s : skhd -k "escape" ; skhd --restart-service
+service_mode < b : skhd -k "escape" ; sketchybar --reload
