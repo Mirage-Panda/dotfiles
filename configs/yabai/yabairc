@@ -20,9 +20,8 @@ yabai -m config  top_padding                $padding        \
                  window_shadow              off             \
                  window_opacity             on              \
                                                             \
-                 focus_follows_mouse        none            \
 window_placement second_child                               \
-                 active_window_opacity      1               \
+                 active_window_opacity      1.0             \
                  normal_window_opacity      0.8             \
                  window_opacity_duration    0.1             \
                  insert_feedback_color      0xfff38ba8      \
@@ -37,6 +36,7 @@ window_placement second_child                               \
                  mouse_action2              resize          \
                  mouse_drop_action          swap
 yabai -m         space 9  --layout          stack
+yabai -m         space 10 --layout          stack
 
 # rules
 yabai -m rule --add app="^(iPhone Mirroring|Archive Utility|System Settings|Raycast|Keka|CleanMyMac X|Autoclick|Stickies|Weave Manager|QuickTime Player|Photo Booth)$" manage=off
@@ -44,3 +44,5 @@ yabai -m rule --add label="WeChat" app="^WeChat$" title!="^WeChat \(Chats)$" man
 yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
 yabai -m rule --add label="Arc" app="^Arc$" title="^(Mirage|General|Profiles|Max|Links|Shortcuts|Icon|Advanced)$" manage=off
 yabai -m rule --add label="Firefox" app="^(Firefox|Firefox Nightly|Firefox Developer Edition)$" title="Picture-In-Picture" manage=off
+yabai -m rule --add label="Books" app="^Books$" title!="^(Home|All|Want to Read|Finished|(PDF|My Sample|(Book|Audiobook)s))$" manage=off grid=1:1:0:0:1:1
+yabai -m signal --add event=window_moved action="yabai -m window --grid 1:1:0:0:1:1" app="^Books$" title!="^(Home|All|Want to Read|Finished|(PDF|My Sample|(Book|Audiobook)s))$"
