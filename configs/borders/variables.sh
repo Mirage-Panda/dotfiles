@@ -1,6 +1,5 @@
 # variables
 export WIDTH=5
-export INACTIVE="gradient(top_left=0x88$MOCHA_OVERLAY0,bottom_right=0xdd$MOCHA_SURFACE0)"
 
 # mocha accents
 export MOCHA_ROSEWATER=f5e0dc
