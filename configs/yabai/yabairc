@@ -31,7 +31,7 @@ window_placement second_child                               \
                                                             \
                  layout                     bsp             \
                                                             \
-                 mouse_modifier             cmd             \
+                 mouse_modifier             ctrl            \
                  mouse_action1              move            \
                  mouse_action2              resize          \
                  mouse_drop_action          swap
@@ -46,3 +46,4 @@ yabai -m rule --add label="Arc" app="^Arc$" title="^(Mirage|General|Profiles|Max
 yabai -m rule --add label="Firefox" app="^(Firefox|Firefox Nightly|Firefox Developer Edition)$" title="Picture-in-Picture" manage=off
 yabai -m rule --add label="Books" app="^Books$" title!="^(Home|All|Want to Read|Finished|(PDF|My Sample|(Book|Audiobook)s))$" manage=off grid=1:1:0:0:1:1
 yabai -m signal --add event=window_moved action="yabai -m window --grid 1:1:0:0:1:1" app="^Books$" title!="^(Home|All|Want to Read|Finished|(PDF|My Sample|(Book|Audiobook)s))$"
+yabai -m signal --add event=window_resized action="yabai -m window --grid 1:1:0:0:1:1" app="^Books$" title!="^(Home|All|Want to Read|Finished|(PDF|My Sample|(Book|Audiobook)s))$"

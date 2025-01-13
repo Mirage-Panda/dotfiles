@@ -39,7 +39,7 @@ ralt - a : yabai -m window --focus west
 ralt - d : yabai -m window --focus east
 
 # toggles
-ralt - m : yabai -m window --toggle zoom-fullscreen
+resize_mode < m : yabai -m window --toggle zoom-fullscreen ; skhd -k "escape"
 ralt - t : yabai -m window --toggle sticky --grid 4:4:1:1:2:2 && yabai -m window --move rel:0:-80
 ralt - space : yabai -m window --toggle float --grid 4:4:1:1:2:2 && yabai -m window --move rel:0:-80
 
@@ -48,7 +48,7 @@ ralt - s : yabai -m space --layout stack
 ralt - b: yabai -m space --layout bsp
 
 # balance out windows
-ralt - e : yabai -m space --balance
+resize_mode < e : yabai -m space --balance ; skhd -k "escape"
 
 # resize_mode
 resize_mode < i : yabai -m window --resize top:0:-20;   \
@@ -65,22 +65,22 @@ resize_mode < x : yabai -m space --mirror x-axis
 resize_mode < y : yabai -m space --mirror y-axis
 
 # change spaces
-lshift + ralt - 1 : yabai -m window --space 1
-lshift + ralt - 2 : yabai -m window --space 2
-lshift + ralt - 3 : yabai -m window --space 3
-lshift + ralt - 4 : yabai -m window --space 4
-lshift + ralt - 5 : yabai -m window --space 5
-lshift + ralt - 6 : yabai -m window --space 6
-lshift + ralt - 7 : yabai -m window --space 7
-lshift + ralt - 8 : yabai -m window --space 8
-lshift + ralt - 9 : yabai -m window --space 9
-lshift + ralt - 0 : yabai -m window --space 10
+shift + ralt - 1 : yabai -m window --space 1
+shift + ralt - 2 : yabai -m window --space 2
+shift + ralt - 3 : yabai -m window --space 3
+shift + ralt - 4 : yabai -m window --space 4
+shift + ralt - 5 : yabai -m window --space 5
+shift + ralt - 6 : yabai -m window --space 6
+shift + ralt - 7 : yabai -m window --space 7
+shift + ralt - 8 : yabai -m window --space 8
+shift + ralt - 9 : yabai -m window --space 9
+shift + ralt - 0 : yabai -m window --space 10
 
 # swap windows
-lshift + ralt - s : yabai -m window --swap south
-lshift + ralt - w : yabai -m window --swap north
-lshift + ralt - a : yabai -m window --swap west
-lshift + ralt - d : yabai -m window --swap east
+shift + ralt - s : yabai -m window --swap south
+shift + ralt - w : yabai -m window --swap north
+shift + ralt - a : yabai -m window --swap west
+shift + ralt - d : yabai -m window --swap east
 
 # switch spaces
 ralt - 0x2B : yabai -m space --focus prev
