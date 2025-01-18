@@ -18,7 +18,7 @@
         {
             "key": "│ {#31} user    {#keys}│",
             "type": "title",
-            "format": "{user-name}"
+            "format": "saturn"
         },
         {
             "key": "│ {#33}󰅐 uptime  {#keys}│",
