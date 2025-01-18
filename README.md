@@ -1,6 +1,6 @@
 # dotfiles
 ## Screenshots
-<img src="https://github.com/Mirage-Panda/dotfiles/blob/main/screenshots/Screensavers.png?raw=true">
+<img src="https://github.com/Mirage-Panda/dotfiles/blob/main/screenshots/Kitty Screensavers.png?raw=true">
 <i>In the screenshot, the terminal font has been reduced (I have a very small screen).</i>
 
 ## Sources
