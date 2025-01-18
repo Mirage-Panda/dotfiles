@@ -6,8 +6,8 @@ sudo yabai --load-sa
 eval ~/.config/borders/default_borders.sh &
 
 # variables
-export padding=16
-export gap=12
+export padding=16 # screen edge padding
+export gap=16 # window gaps
 
 # configs
 yabai -m config  top_padding                $padding        \
@@ -44,6 +44,3 @@ yabai -m rule --add label="WeChat" app="^WeChat$" title!="^WeChat \(Chats)$" man
 yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
 yabai -m rule --add label="Arc" app="^Arc$" title="^(Mirage|General|Profiles|Max|Links|Shortcuts|Icon|Advanced)$" manage=off
 yabai -m rule --add label="Firefox" app="^(Firefox|Firefox Nightly|Firefox Developer Edition)$" title="Picture-in-Picture" manage=off opacity=1.0
-yabai -m rule --add label="Books" app="^Books$" manage=off grid=1:1:0:0:1:1
-yabai -m signal --add event=window_moved action="yabai -m window --grid 1:1:0:0:1:1" app="^Books$"
-yabai -m signal --add event=window_resized action="yabai -m window --grid 1:1:0:0:1:1" app="^Books$"
