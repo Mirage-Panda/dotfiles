@@ -1,5 +1,5 @@
 # dotfiles
-This repo follows a more rapid/rolling release style, and sometimes thinkgs break, but usually I fix the bug in a day or so.
+This repo updates very rapidly, and sometimes things break, but usually I fix the bug in a day or so.
 ***
 ## Screenshots
 <img src="https://github.com/Mirage-Panda/dotfiles/blob/main/screenshots/Kitty Screensavers.png?raw=true">
