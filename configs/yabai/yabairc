@@ -44,3 +44,4 @@ yabai -m rule --add label="WeChat" app="^WeChat$" title!="^WeChat \(Chats)$" man
 yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
 yabai -m rule --add label="Arc" app="^Arc$" title="^(Mirage|General|Profiles|Max|Links|Shortcuts|Icon|Advanced)$" manage=off
 yabai -m rule --add label="Firefox" app="^(Firefox|Firefox Nightly|Firefox Developer Edition)$" title="Picture-in-Picture" manage=off opacity=1.0
+yabai -m rule --add label="Affinity" app="^Affinity (Designer|Photo) 2$" opacity=1.0
