@@ -40,8 +40,16 @@ ralt - l : yabai -m window --focus east
 
 # toggles
 resize_mode < m : yabai -m window --toggle zoom-fullscreen ; skhd -k "escape"
-resize_mode < s : yabai -m window --toggle sticky --grid 4:4:1:1:2:2 && yabai -m window --move rel:0:-80 ; skhd -k "escape"
-resize_mode < f : yabai -m window --toggle float --grid 4:4:1:1:2:2 && yabai -m window --move rel:0:-80 ; skhd -k "escape"
+resize_mode < p : yabai -m window --toggle zoom-parent ; skhd -k "escape"
+# first value: how many grids to divide the screen into along the x axis
+# second value: how many grids to divide the screen into along the y axis
+# third value: the grid along the x axis for the window to start at (centre value is 1/4 of first value)
+# fourth value: the grid along the y axis for the window to start at (centre value is 1/4 of second value)
+# fifth value: how big the window should be in the grids defined for the first value
+# sixth value: how big the window should be in the grids defined for the second value
+ralt - s : yabai -m window --toggle sticky --grid 20:20:5:3:10:10
+ralt - space : yabai -m window --toggle float --grid 20:20:5:3:10:10
+ralt - f : yabai -m window --toggle float
 
 # change space layout
 ralt - s : yabai -m space --layout stack
@@ -51,14 +59,14 @@ ralt - b: yabai -m space --layout bsp
 resize_mode < e : yabai -m space --balance ; skhd -k "escape"
 
 # resize_mode
-resize_mode < i : yabai -m window --resize top:0:-20;   \
-                  yabai -m window --resize bottom:0:-20
-resize_mode < j : yabai -m window --resize left:-20:0;  \
-                  yabai -m window --resize right:-20:0;
-resize_mode < k : yabai -m window --resize bottom:0:20; \
-                  yabai -m window --resize top:0:20
-resize_mode < l : yabai -m window --resize right:20:0;  \
-                  yabai -m window --resize left:20:0
+resize_mode < i : yabai -m window --resize top:0:-10;   \
+                  yabai -m window --resize bottom:0:-10
+resize_mode < j : yabai -m window --resize left:-10:0;  \
+                  yabai -m window --resize right:-10:0;
+resize_mode < k : yabai -m window --resize bottom:0:10; \
+                  yabai -m window --resize top:0:10
+resize_mode < l : yabai -m window --resize right:10:0;  \
+                  yabai -m window --resize left:10:0
 
 # flips
 resize_mode < x : yabai -m space --mirror x-axis
