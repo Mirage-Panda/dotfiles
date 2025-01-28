@@ -1,8 +1,9 @@
+-- left
 require("items.apple")
 require("items.menus")
 require("items.spaces")
-require("items.front_app")
+
+-- right (reverse)
 require("items.calendar")
 require("items.widgets")
 require("items.media")
--- require("items.yabai")
