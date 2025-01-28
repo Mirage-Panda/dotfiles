@@ -50,9 +50,9 @@ battery:subscribe({ "routine", "power_source_change", "system_woke" }, function(
 				icon = icons.battery._100
 			elseif found and charge > 60 then
 				icon = icons.battery._75
-			elseif found and charge > 40 then
+			elseif found and charge > 30 then
 				icon = icons.battery._50
-			elseif found and charge > 20 then
+			elseif found and charge > 15 then
 				icon = icons.battery._25
 				color = colors.orange
 			else
