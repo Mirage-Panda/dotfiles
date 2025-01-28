@@ -10,9 +10,6 @@ for i = 1, 10, 1 do
 		space = i,
 		icon = {
 			font = { family = settings.font.numbers },
-			font = {
-				style = settings.font.style_map["Semibold"],
-			},
 			string = i,
 			padding_left = 15,
 			padding_right = 8,
