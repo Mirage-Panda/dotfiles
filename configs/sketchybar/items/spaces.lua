@@ -6,11 +6,16 @@ local settings = require("settings")
 local spaces = {}
 
 for i = 1, 10, 1 do
+	local space_icon = i
+	if i == 10 then
+		space_icon = "0"
+	end
+
 	local space = sbar.add("space", "space." .. i, {
 		space = i,
 		icon = {
 			font = { family = settings.font.numbers },
-			string = i,
+			string = space_icon,
 			padding_left = 15,
 			padding_right = 8,
 			color = colors.white,
