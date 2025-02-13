@@ -108,3 +108,4 @@ ralt - 0 : yabai -m space --focus 10
 service_mode < y : skhd -k "escape" ; yabai --restart-service
 service_mode < s : skhd -k "escape" ; skhd --restart-service
 service_mode < b : skhd -k "escape" ; sketchybar --reload
+service_mode < m : skhd -k "escape" ; eval ~/.config/borders/init_borders.sh

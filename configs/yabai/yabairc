@@ -3,7 +3,7 @@ yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
 
 # Initialise Bootstraps
-eval ~/.config/borders/default_borders.sh &
+eval ~/.config/borders/init_borders.sh &
 
 # variables
 export padding=16 # screen edge padding
