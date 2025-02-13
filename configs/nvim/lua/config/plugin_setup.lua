@@ -26,7 +26,7 @@ require("conform").setup({
 		css = { "prettier" },
 		html = { "prettier" },
 		json = { "prettier" },
-		js = { "prettier" },
+		javascript = { "prettier" },
 		yaml = { "prettier" },
 		bash = { "beautysh" },
 		sh = { "beautysh" },
