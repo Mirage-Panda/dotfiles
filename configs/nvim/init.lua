@@ -21,7 +21,11 @@ require("lazy").setup({
 	spec = {
 		{ import = "plugins" },
 	},
-	checker = { enabled = true },
+	checker = {
+		-- check for plugin updates
+		enabled = true,
+		notify = false,
+	},
 	change_detection = {
 		-- check for config changes
 		enabled = true,
