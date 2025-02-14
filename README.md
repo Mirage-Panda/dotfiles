@@ -3,7 +3,7 @@ Dotfiles for my MacOS configuration!
 V1 ([Screenshots Folder](https://github.com/Mirage-Panda/dotfiles/tree/main/screenshots/Old/V1)): [\[Yabai\] First MacOS Rice](https://www.reddit.com/r/unixporn/comments/1frcfxg/yabai_first_macos_rice/)
 ***
 ## Screenshots
-<img src="https://github.com/Mirage-Panda/dotfiles/blob/main/screenshots/Books and Spotify.png?raw=true">
+<img src="https://github.com/Mirage-Panda/dotfiles/blob/main/screenshots/Cava and Fetches.png?raw=true">
 
 ## User Interface
 - Borders: [JankyBorders](https://github.com/FelixKratz/JankyBorders)  
