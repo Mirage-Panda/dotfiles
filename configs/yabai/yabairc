@@ -22,7 +22,7 @@ yabai -m config  top_padding                $padding        \
                                                             \
 window_placement second_child                               \
                  active_window_opacity      1.0             \
-                 normal_window_opacity      0.8             \
+                 normal_window_opacity      0.9             \
                  window_opacity_duration    0.1             \
                  insert_feedback_color      0xfff38ba8      \
                  menubar_opacity            0.2             \
