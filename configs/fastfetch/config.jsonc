@@ -24,7 +24,7 @@
             "key": "│ {#33}󰅐 uptime  {#keys}│",
             "type": "uptime"
         },
-	{
+        {
             "key": "│ {#35}󰏖 packages{#keys}│",
             "type": "packages"
         },
