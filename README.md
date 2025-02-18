@@ -1,6 +1,6 @@
 # dotfiles
 Dotfiles for my MacOS configuration!  
-V1 ([Screenshots Folder](https://github.com/Mirage-Panda/dotfiles/tree/main/screenshots/Old/V1)): [\[Yabai\] First MacOS Rice](https://www.reddit.com/r/unixporn/comments/1frcfxg/yabai_first_macos_rice/)
+[V1](https://www.reddit.com/r/unixporn/comments/1frcfxg/yabai_first_macos_rice/): [Screenshots Folder](https://github.com/Mirage-Panda/dotfiles/tree/main/screenshots/Old/V1)
 ***
 ## Screenshots
 <img src="https://github.com/Mirage-Panda/dotfiles/blob/main/screenshots/Cava and Fetches.png?raw=true">
