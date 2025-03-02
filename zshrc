@@ -27,6 +27,8 @@ alias clearfetch="cd && clear && fastfetch"
 alias python="python3"
 alias cmatrix="unimatrix -n -s 96 -l o"
 alias neofetch="fastfetch"
+alias owlwisdom="fortune -s -n 100 magic wisdom science goedel | cowsay -f owl"
+alias grep="grep --color -E"
 
 # fastfetch only on first terminal window
 LIVE_COUNTER=$(ps a | awk '{print $2}' | grep -vi "tty*" | uniq | wc -l);
